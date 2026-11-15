@@ -55,11 +55,11 @@ plot_1d_thresh <- function(obj, x, pvals,
                            num_yticks = 3,
                            rand_seed_perturb = NA,
                            ...){
-    if (!"adapt" %in% class(obj)){
+    if (!inherits(obj, "adapt")){
         stop("obj is not an 'adapt' object.")
     }
 
-    if (class(x) != "numeric"){
+    if (class(x)[1] != "numeric"){
         x <- as.numeric(x[, 1])
     }
     if (length(x) != length(pvals)){
@@ -128,11 +128,11 @@ plot_1d_lfdr <- function(obj, x, pvals,
                          num_yticks = 3,
                          legend_pos = "topright",
                          ...){
-    if (!"adapt" %in% class(obj)){
+    if (!inherits(obj, "adapt")){
         stop("\'obj\' is not an \'adapt\' object.")
     }
 
-    if (class(x) != "numeric"){
+    if (class(x)[1] != "numeric"){
         x <- as.numeric(x[, 1])
     }
     if (length(x) != length(pvals)){

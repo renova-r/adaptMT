@@ -64,7 +64,7 @@ create_stamps <- function(nmasks, nfits, nms){
 }
 
 check_pkgs <- function(models){
-    if (class(models) == "adapt_model"){
+    if (inherits(models, "adapt_model")){
         models <- list(models)
     }
 
@@ -194,7 +194,7 @@ adapt <- function(x, pvals, models,
     check_pkgs(models)
 
     ## When a single model is provided, set 'nms' to be NULL
-    if (class(models) == "adapt_model"){
+    if (inherits(models, "adapt_model")){
         model <- models
         nms <- NULL
     } else if (is.list(models)){

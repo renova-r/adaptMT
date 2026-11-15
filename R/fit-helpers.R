@@ -14,7 +14,7 @@ fit_pi <- function(fun, args, type = c("Mstep", "init")){
     }
 
     fit <- try(do.call(fun, args))
-    if (class(fit) == "try-error"){
+    if (inherits(fit, "try-error")){
         warning("Initialization of pi(x) by \'pifun_init\' fails. Initialize pi(x) as a constant 0.1 by default. Please check if too few p-values lying in [s0, 1-s0] and decrease s0 or change \'pifun_init\' if so. ")
     }
     if (is.null(fit$fitv)){

@@ -37,7 +37,7 @@ Plotting the outputs of \code{adapt} when \code{x} is 2-dimensional, including t
 \details{
 The breaks in the legend of \code{plot_2d_thresh} correspond to the maximum, the 95% quantile, the 90% quantile, the 85% quantile, the 75% quantile and the minimum of the thresholds.
 
-\code{plot_2d_lfdr} gives the contour plot of local FDR estimates when all p-values are equal to \code{targetp}. It is recommended to run \code{plot_2d_lfdr} for multiple \code{targetp}'s ranging from {0.001, 0.005, 0.01, 0.05}.
+\code{plot_2d_lfdr} gives the contour plot of local FDR estimates when all p-values are equal to \code{targetp}. It is recommended to run \code{plot_2d_lfdr} for multiple \code{targetp}'s ranging from \{0.001, 0.005, 0.01, 0.05\}.
 }
 \examples{
 \donttest{

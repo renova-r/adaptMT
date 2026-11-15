@@ -43,7 +43,7 @@ adapt(x, pvals, models, dist = beta_family(), s0 = rep(0.45, length(pvals)),
 \item{rejs}{a list of vector of integers. The set of indices of rejections for each alpha}
 \item{s}{a matrix of size \code{length(pvals) X length(alphas)}. Threshold curves for each alpha}
 \item{params}{a list. Each element is a list in the form of \code{list(pix = , mux = , alpha = , nmasks =)}, recording the parameter estimates, the achieved alpha and the number of masked p-values. To avoid massive storage cost, it only contains the information when a new target FDR level is achieved. As a result, it might be  shorter than \code{nfits}.}
-\item{qvals}{a vector of values in [0, 1]U{Inf}. Q-values. See Details}
+\item{qvals}{a vector of values in [0, 1]U\code{Inf}. Q-values. See Details}
 \item{order}{a permutation of \code{1:length(pvals)}. Indices of hypotheses arranged in the order of reveal. See Details}
 \item{alphas}{same as the input \code{alphas}}
 \item{dist}{same as the input \code{dist}}

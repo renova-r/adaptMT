@@ -18,13 +18,11 @@ corr_lfdr(obj, x, pvals, model = NULL, niter_oracle = 100)
 \item{niter_oracle}{an positive integer. Number of iterations in EM algorithm}
 }
 \value{
-\itemize{
 \item{corr}{a vector of values in [0, 1]. Pearson correlation of oracle local FDR estimate and the estimates within each step. Each value corresponds to an entry of \code{obj$params}}
 \item{oracle_lfdr}{a vector of values in [0, 1]. Oracle local FDR estimate}
 \item{lfdr}{a matrix of values in [0, 1]. Local FDR estimates within each step.}
 \item{alphas}{a vector of values in [0, 1]. The target FDR levels corresponding to each local FDR estimate}
 \item{nmasks}{a vector of integers. The number of masked p-values corresponding to each local FDR estimate}
-}
 }
 \description{
 \code{corr_lfdr} computes the oracle local FDR estimate, by using revealing all p-values, and computes the Pearson correlation between it and the estimate within each step of \code{adapt}.

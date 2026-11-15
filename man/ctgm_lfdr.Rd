@@ -28,10 +28,8 @@ ctgm_lfdr(x, pvals, models, dist = beta_family(), type = c("over", "raw"),
 \item{verbose}{a logical values in the form of list(fit = , ms = ). Indicate whether the progress of model fitting and model selection is displayed}
 }
 \value{
-\itemize{
 \item{lfdr}{a vector of values in [0, 1]. Local FDR estimates of each hypothesis.}
 \item{model}{an \code{adapt_model} object. The selected model if multiple models are provided.}
-}
 }
 \description{
 \code{ctgm_lfdr} computes the oracle local FDR estimate, by using all p-values without masking.

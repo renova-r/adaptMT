@@ -1,6 +1,5 @@
-citHeader("To cite adaptMT in publications, please use:")
-
-citEntry(entry = "article",
+bibentry(bibtype = "article",
+         header = "To cite adaptMT in publications, please use:",
          author = "Lihua Lei and William Fithian",
          title = "AdaPT: An interactive procedure for multiple testing with side information",
          journal = "Arxiv",
